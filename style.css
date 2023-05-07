@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100&display=swap');
+
+html {
+  font-size: 62.5%;
+  
+  }
+*{
+    padding:0;
+    margin:0;
+    
+  }
+  :root {
+    --body-bg-color: #dce4e3;
+    --green: #18c29c;
+    --light-green: #8ed7c6;
+    --light-grey: #dce4e3;
+    --text-color: #084236;
+  }
+  .container{
+    background-color:var(--body-bg-color);
+     height:100vh;
+     display: flex;
+     width: 100%;
+     flex-direction: row;
+     
+  
+   }
+   .menu{
+    width: 100px;
+    background-color:var(--green);
+    display: flex ;
+    height:100vh;
+    position:relative;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    flex-direction: row;
+    box-shadow: 1px 6px 15px rgba(0, 0, 0, 0.2);
+    transition:  .6s ease;
+   }
+  
+  h1{
+    font-family: 'Roboto', sans-serif;
+    color:var(--text-color);
+    text-align:center;
+    margin: 10px 30px;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+    font-size: 3.5rem;
+  }
+  
+  .menu .icone-menu{
+    position:absolute;
+    left:30px;
+    top: 0;
+    font-size: 30px;
+    margin: 10px;
+    transition: .6s ease;
+  }
+  .menu.active{
+    width:300px;
+    transition: width .6s ease;
+  }
+  .menu .fa-shield-dog{
+    transform: translateX(-130px);
+    transition: transform .6s ease;
+  
+
+  }
+  #bars{
+    margin: 10px auto;
+    transition: transform .6s ease;
+
+  }
+  .menu.active .fa-shield-dog{
+    display: block;
+    transform: translateX(-20px);
+    transition: transform .6s ease;
+
+  }
+  .menu.active #bars {
+    transform: translateX(200px);
+    transition:  .6s ease;
+  }
+  .nav{
+    margin: 120px auto;
+    position: fixed;
+  }
+  .nav ul{
+    list-style: none;
+    margin-left:-20px ;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .nav ul li {
+    font-family: 'Roboto', sans-serif;
+    padding: 25px;
+    
+  }
+  .nav ul li .text {
+  
+    margin-top: -22px;
+    transform: translateX(-100px);
+    transition: transform .9s ease;
+    display: none;
+  }
+  .nav ul li i{
+    font-size: 25px;
+    margin: 0 30px;
+  }
+  .nav ul i.active{
+    padding-top: 5px;
+  }
+  .nav ul.active li .text{
+    display: inline-block;
+    font-size: 15px;
+    transform: translateX(8px );
+    transition: transform .1s ease;
+    margin-top: -22px;
+    cursor: pointer;
+    
+  }
+  .nav ul.active li .text:hover{
+    transition: .5s ease;
+    color: aqua;
+  }
+
+   .seach{
+    margin: 0 20px;
+    position: relative;
+    width: 70px;
+
+  }
+  .seach input{
+    border-radius: .5rem;
+    height: 40px;
+    width: 30px;
+    border: 0;
+    transition: width .6s ease;
+    background-color: var(--light-green);
+ 
+    
+  }
+  .seach input::placeholder{
+    padding-left: 80px;
+    font-size: 20px;
+    color: black;
+  }
+  .seach.active input{
+    width:250px;
+    transition: width .6s ease;
+  
+    
+  }
+  .seach .btn {
+    background-color: var(--light-green);
+    position: absolute;
+    top: 0;
+    left: 0px;
+    border-radius: .5rem;
+    width: 65px;
+    height: 40px;
+    border: 0;
+    font-size: 30px;
+    
+  }
+  .seach .btn i{
+    left: -10px;
+    top: 5px;
+    font-size: 30px;
+  }
+  .btn:focus{
+    outline: 0;
+  }
+  input:focus{
+    outline: 0;
+  }
+   .footer{
+    position: relative;
+    margin: 680px 10px;
+    display: flex;
+    height: 9vh;
+    background-color: var(--light-green);
+    transition: 0.6 ease;
+    border-radius: .5rem;
+    
+  }
+
+  .footer img{
+    width: 70px;
+    height: 50px;
+    border-radius: .5rem;
+    transform: translateX(-200px);
+    transition: transform 0.6s ease;
+    margin-top: 5px;
+  }
+  .footer.active{
+    width: 290px;
+    transition: width .6s ease;
+  }
+  .footer .seta{
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    font-size: 40px;
+    color: black;
+    transition:  .6s ease;
+
+  }
+   .footer.active .seta{
+    transform: translateX(230px);
+    transition: transform .6s ease;
+    margin: 0 -10px;
+
+  }
+   .footer.active img{
+    transform: translateX(10px);
+    transition: transform .6s ease;
+
+  }
+   .footer .footer-paragrafo.active p, .footer-paragrafo.active span{
+    transform: translateX(5px);
+    transition:  .6s ease;
+    display: inline-block;
+    margin-left: 30px; 
+    transition: transform .6s ease;
+  }
+
+  .footer-paragrafo p, span{
+    font-size: 18px;
+    padding: 2px;
+     display: none;
+     transition:  .6s ease;
+ 
+  }
+
+
+  @media(max-width:750px){
+  
+      html{
+        font-size: 50%;
+    
+    }
+    
+  }
